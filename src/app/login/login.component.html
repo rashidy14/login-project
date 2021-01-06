@@ -1,0 +1,10 @@
+<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%;
+border: 15px solid gray; padding: 50px; margin: 20px; background-color: powderblue;">
+<h3 class="mt-3 mb-3">Login</h3>
+
+User Name:<input  class="form-control active" type="text" name="userName" [(ngModel)]="userName"/>
+Password:<input class="form-control active" type="password" [(ngModel)]="password"/> <br>
+<button class="btn btn-success btn-lg" (click)=loginAction()>Login</button> <br>
+<div style="color: red;" *ngIf="wrongCredentials">Invalid Username and/or Password!!!</div>
+
+</div>   

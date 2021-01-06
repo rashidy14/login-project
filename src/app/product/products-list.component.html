@@ -1,0 +1,33 @@
+<div  class="d-flex justify-content-center" style="background-color: rgb(213, 228, 230);">
+  
+<div class="class=w-50 mx-auto" >
+    <h1 class="mt-3 mb-3  text-center">Products List</h1>
+<hr> <hr>
+<table style="width: 100%;" class="table table-hover ">
+    <thead class="thead-dark">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Serial</th>
+        <th> Made in </th>
+        <th> Fabrication Date</th>
+        <th> Price 'USD' </th>
+    </tr>
+    </thead>
+        <tr *ngFor = "let product of products">
+           
+            <td><input [(ngModel)]= "product.index" type="text" [readonly]="readonlyFlag"></td>
+            <td><input [(ngModel)]= "product.name" type="text" [readonly]="readonlyFlag"></td>
+            <td><input [(ngModel)]= "product.serial" type="text" readonly ></td>
+            <td><input [(ngModel)]= "product.made_in" type="text" [readonly]="readonlyFlag"></td>
+            <td><input [(ngModel)]= "product.fab_data"   type="text" [readonly]="readonlyFlag"></td>
+            <td><input [(ngModel)]= "product.price" type="text" [readonly]="readonlyFlag"></td>
+        </tr>
+       
+    </table>
+    <hr> <hr>
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)= update() >Update</button><br>
+    <button type="button" class="btn btn-success btn-lg btn-block"  (click)=save()>Save</button><br>
+    <button type="button" class="btn btn-danger btn-lg btn-block" (click)=logoutAction()>Logout</button> <br>
+    
+</div> </div>
